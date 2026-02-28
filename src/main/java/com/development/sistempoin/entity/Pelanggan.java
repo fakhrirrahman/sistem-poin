@@ -2,6 +2,7 @@ package com.development.sistempoin.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name = "pelanggan")
@@ -17,6 +18,7 @@ public class Pelanggan {
     @Column(name = "total_poin", nullable = false, updatable = false)
     private Integer totalPoin;
     @Column(name = "created_at", nullable = false, updatable = false)
+    @CreationTimestamp
     private String createdAt;
 
     public void setTotalPoin(Integer totalPoin) {
