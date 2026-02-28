@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sistem-poin
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sistem_poin_db
+    username: postgres
+    password: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
