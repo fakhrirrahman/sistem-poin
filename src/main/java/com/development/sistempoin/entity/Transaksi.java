@@ -1,5 +1,6 @@
 package com.development.sistempoin.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +21,7 @@ public class Transaksi {
 
     @ManyToOne
     @JoinColumn(name = "pelanggan_id", nullable = false)
+    @JsonBackReference
     private Pelanggan pelanggan;
 
     @Column(name = "total_belanja", nullable = false)
