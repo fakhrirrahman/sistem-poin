@@ -21,6 +21,9 @@ public class Pelanggan {
     @CreationTimestamp
     private String createdAt;
 
+    @OneToMany(mappedBy = "pelanggan", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<Transaksi> transaksiList;
+
     public void setTotalPoin(Integer totalPoin) {
         if (this.totalPoin == null) {
             this.totalPoin = 0;
